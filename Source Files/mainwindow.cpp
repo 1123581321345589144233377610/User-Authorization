@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     dataBase = QSqlDatabase::addDatabase("QSQLITE");
-    dataBase.setDatabaseName("path_to_your_database/your_database_name.db");
+    dataBase.setDatabaseName("path_to_your_database/name_of_your_database.db");
     if(dataBase.open()){
         qDebug() << "Open!";
     }else{
@@ -28,11 +28,11 @@ void MainWindow::on_pushButton_clicked()
     QString login = ui->login->text();
     QString password = ui->password->text();
     if(login == ""){
-        QMessageBox::information(this, "Failed!", "Enter login!");
+        QMessageBox::warning(this, "Failed!", "Enter login!");
         return;
     }
     if(password == ""){
-        QMessageBox::information(this, "Failed!", "Enter password!");
+        QMessageBox::warning(this, "Failed!", "Enter password!");
         return;
     }
     query->prepare("SELECT EXISTS(SELECT 1 FROM User WHERE Login = :login);");
@@ -41,17 +41,14 @@ void MainWindow::on_pushButton_clicked()
     query->next();
     bool exists = query->value(0).toBool();
     if(exists){
-        hide();
-        failed = new AuthorizationFailed(this);
-        failed->show();
+        QMessageBox::critical(this, "Failed!", "User already exist!");
     }else{
         query->prepare("INSERT INTO User (Login, Password) VALUES (:login, :password);");
         query->bindValue(":login", login);
         query->bindValue(":password", password);
         query->exec();
         hide();
-        success = new AuthorizationComplete(this);
-        success->show();
+        QMessageBox::information(this, "Success!", "Authorization succesful complete!");
     }
 }
 

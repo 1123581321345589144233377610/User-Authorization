@@ -6,8 +6,6 @@
 #include <QDebug>
 #include <QSqlQuery>
 #include <QMessageBox>
-#include "authorizationcomplete.h"
-#include "authorizationfailed.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -30,7 +28,5 @@ private:
     Ui::MainWindow *ui;
     QSqlDatabase dataBase;
     QSqlQuery *query;
-    AuthorizationComplete *success;
-    AuthorizationFailed *failed;
 };
 #endif // MAINWINDOW_H
