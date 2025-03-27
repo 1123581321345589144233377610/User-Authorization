@@ -24,6 +24,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(Authorization
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
+        recources.qrc
+        recources.qrc
+
+
+
+
+
 
 
 
