@@ -33,7 +33,7 @@
      </rect>
     </property>
     <property name="title">
-     <string>Authorization</string>
+     <string/>
     </property>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -80,7 +80,7 @@
       <item>
        <widget class="QPushButton" name="pushButton">
         <property name="text">
-         <string>Log in</string>
+         <string>Sign up</string>
         </property>
        </widget>
       </item>
@@ -100,7 +100,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../../../../Downloads/free-icon-authorization-12050714.png</pixmap>
+     <pixmap resource="resources.qrc">:/rec/images/add-friend (1).png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
@@ -109,15 +109,34 @@
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>310</y>
+      <x>120</x>
+      <y>280</y>
       <width>191</width>
-      <height>20</height>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>350</y>
+      <width>158</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>Sign in</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -132,6 +151,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
