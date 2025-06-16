@@ -14,29 +14,29 @@ cd User-Authorization
 ```
 ## 📷 Screenshots
 
-![](image.png)
+![](screenshots/image1.png)
 
-![](image-1.png)
+![](screenshots/image2.png)
 
-![](image-2.png)
+![](screenshots/image3.png)
 
-![](image-3.png)
+![](screenshots/image4.png)
 
-![](image-4.png)
+![](screenshots/image5.png)
 
-![](image-5.png)
+![](screenshots/image6.png)
 
-![](image-6.png)
+![](screenshots/image7.png)
 
-![](image-7.png)
+![](screenshots/image8.png)
 
-![](image-8.png)
+![](screenshots/image9.png)
 
-![](image-9.png)
+![](screenshots/image10.png)
 
-![](image-10.png)
+![](screenshots/image11.png)
 
-![](image-11.png)
+![](screenshots/image12.png)
 
 ## 👤 Author
 
